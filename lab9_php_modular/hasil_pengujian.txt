@@ -1,0 +1,56 @@
+HASIL PENGUJIAN OTOMATIS - lab9_php_modular (Praktikum 9: PHP Modular)
+Waktu        : 2026-11-24 20:43:38
+Browser      : Playwright/Chromium headless (interaksi form, unggah, klik tombol)
+Base URL     : http://localhost/lab9_php_modular
+Total        : 48 pemeriksaan | 48 PASS | 0 FAIL
+========================================================================================
+ 1. [PASS] Dashboard HTTP 200  | 200
+ 2. [PASS] Dashboard memakai template bersama (header+nav+footer)
+ 3. [PASS] Koneksi database tampil di dashboard
+ 4. [PASS] Demo function hitungDiskon+formatRupiah (15% = Rp 30.000)
+ 5. [PASS] Demo function hitungDiskon+formatRupiah (10% = Rp 20.000)
+ 6. [PASS] uji-include.php menampilkan Sebelum & Sesudah pemanggilan
+ 7. [PASS] uji-require.php menampilkan keluaran sama
+ 8. [PASS] Halaman home HTTP 200  | 200
+ 9. [PASS] Halaman home menampilkan judul konten
+10. [PASS] Menu 'home' aktif (class=aktif)
+11. [PASS] Halaman home tanpa salinan header/footer (hanya 1 <footer>)
+12. [PASS] Halaman profil HTTP 200  | 200
+13. [PASS] Halaman profil menampilkan judul konten
+14. [PASS] Menu 'profil' aktif (class=aktif)
+15. [PASS] Halaman profil tanpa salinan header/footer (hanya 1 <footer>)
+16. [PASS] Halaman kontak HTTP 200  | 200
+17. [PASS] Halaman kontak menampilkan judul konten
+18. [PASS] Menu 'kontak' aktif (class=aktif)
+19. [PASS] Halaman kontak tanpa salinan header/footer (hanya 1 <footer>)
+20. [PASS] ringkasTeks() memotong bio + elipsis
+21. [PASS] validasiEmail() menolak email salah
+22. [PASS] validasiEmail() menerima email benar
+23. [PASS] Rute tak dikenal -> status 404  | 404
+24. [PASS] Halaman 404 tampil
+25. [PASS] Parameter page kosong -> dashboard (200, aman)
+26. [PASS] Parameter page bertipe array -> 404 (aman)  | 404
+27. [PASS] Path traversal ditolak whitelist -> 404  | 404
+28. [PASS] Menu 'Data Barang' aktif di halaman list
+29. [PASS] Daftar barang menampilkan 3 data awal  | baris=3
+30. [PASS] Harga tampil dalam format Rupiah (formatRupiah)
+31. [PASS] Tautan aksi memakai pola index.php?page=...
+32. [PASS] Form tambah tampil
+33. [PASS] Setelah Simpan: redirect ke daftar barang
+34. [PASS] Setelah Simpan: pesan sukses tampil (flash)
+35. [PASS] Setelah Simpan: data ke-4 muncul  | baris=4
+36. [PASS] Gambar unggahan tampil
+37. [PASS] Form ubah terisi data lama
+38. [PASS] Form ubah memakai helper hitungDiskon untuk pratinjau
+39. [PASS] Setelah Simpan: nama baru tampil
+40. [PASS] Setelah Simpan: stok baru = 7
+41. [PASS] Setelah Simpan: pesan sukses tampil
+42. [PASS] Setelah Hapus: kembali 3 data  | baris=3
+43. [PASS] Setelah Hapus: pesan sukses tampil
+44. [PASS] Setelah Hapus: data terhapus tidak ada lagi
+45. [PASS] Akses GET page=barang/delete DIBLOKIR (tidak menghapus)  | baris=3
+46. [PASS] POST tanpa token CSRF ditolak (data id=1 utuh)
+47. [PASS] Data id=1 masih ada setelah POST tanpa CSRF
+48. [PASS] Tidak ada pesan error PHP/JS selama pengujian
+========================================================================================
+Kesimpulan: 48/48 pemeriksaan lulus.

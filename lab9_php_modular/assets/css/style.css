@@ -1,0 +1,358 @@
+/* style.css — lab9_php_modular (PHP Modular) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background: #f2f4f8;
+    color: #263238;
+    padding: 24px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #d9dee7;
+    border-radius: 8px;
+    padding: 24px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* --- Template: header, navigasi, footer --- */
+header, footer {
+    padding: 16px;
+    background: #eaf2f8;
+    border-radius: 6px;
+}
+
+header h1 {
+    font-size: 24px;
+    color: #1a3c6e;
+}
+
+header p {
+    font-size: 14px;
+    color: #516171;
+    margin-top: 4px;
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+    padding: 14px 0;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #1a3c6e;
+    margin-bottom: 18px;
+}
+
+nav a {
+    color: #145a86;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background: #eaf2f8;
+}
+
+nav a.aktif {
+    background: #1a3c6e;
+    color: #ffffff;
+}
+
+main {
+    min-height: 240px;
+    padding: 8px 0 16px;
+}
+
+footer {
+    text-align: center;
+    font-size: 13px;
+    color: #516171;
+    margin-top: 12px;
+}
+
+/* --- Konten halaman --- */
+.content h2 {
+    color: #1a3c6e;
+    font-size: 20px;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #d9dee7;
+    padding-bottom: 8px;
+}
+
+.content h3 {
+    font-size: 16px;
+    color: #1a3c6e;
+    margin-bottom: 8px;
+}
+
+.content p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.content ul.daftar-rute {
+    margin: 8px 0 14px 20px;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+code {
+    background: #eef1f6;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 14px;
+    margin: 14px 0;
+}
+
+.card {
+    background: #f7f9fc;
+    border: 1px solid #d9dee7;
+    border-radius: 6px;
+    padding: 14px;
+}
+
+.catatan {
+    font-size: 13px;
+    color: #516171;
+    background: #fffbea;
+    border: 1px solid #f0e3b3;
+    border-radius: 4px;
+    padding: 8px 10px;
+    margin-top: 10px;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+
+.toolbar h2 {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- Pesan flash --- */
+.flash {
+    padding: 10px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+.flash-sukses {
+    background: #e7f6ec;
+    border: 1px solid #9fd8b1;
+    color: #1e7a41;
+}
+
+.flash-gagal {
+    background: #fdecea;
+    border: 1px solid #f3b0a8;
+    color: #b3261e;
+}
+
+.sukses {
+    color: #1e7a41;
+    font-weight: 600;
+}
+
+.gagal {
+    color: #b3261e;
+    font-weight: 600;
+}
+
+/* --- Tabel (daftar barang & profil) --- */
+.main {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+th, td {
+    border: 1px solid #d9dee7;
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    background: #1a3c6e;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background: #f7f9fc;
+}
+
+td img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #d9dee7;
+    display: block;
+}
+
+.tabel-profil td:first-child {
+    font-weight: 600;
+    width: 40%;
+    background: #f7f9fc;
+}
+
+.thumb {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    vertical-align: middle;
+    border: 1px solid #d9dee7;
+    border-radius: 4px;
+}
+
+/* --- Form --- */
+.form-terbatas {
+    max-width: 480px;
+}
+
+.input {
+    margin-bottom: 14px;
+}
+
+.input label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.input input[type="text"],
+.input input[type="number"],
+.input select {
+    width: 100%;
+    padding: 9px 10px;
+    border: 1px solid #c4ccd8;
+    border-radius: 4px;
+    font-size: 14px;
+    background: #fff;
+}
+
+.input input[type="file"] {
+    font-size: 14px;
+}
+
+.input input:focus,
+.input select:focus {
+    outline: none;
+    border-color: #1a3c6e;
+    box-shadow: 0 0 0 2px rgba(26, 60, 110, 0.15);
+}
+
+.submit {
+    margin-top: 18px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.submit input[type="submit"] {
+    background: #1a3c6e;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 26px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.submit input[type="submit"]:hover {
+    background: #12294c;
+}
+
+/* --- Tombol --- */
+.btn {
+    display: inline-block;
+    background: #1a3c6e;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 9px 18px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #12294c;
+}
+
+.btn-batal {
+    color: #516171;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 9px 12px;
+    border: 1px solid #c4ccd8;
+    border-radius: 4px;
+}
+
+.btn-batal:hover {
+    background: #eef1f6;
+}
+
+.btn-kecil {
+    display: inline-block;
+    background: #145a86;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-kecil:hover {
+    background: #0f4464;
+}
+
+.btn-hapus {
+    background: #b3261e;
+}
+
+.btn-hapus:hover {
+    background: #8c1d17;
+}
+
+td.aksi {
+    white-space: nowrap;
+}
+
+td.aksi form.inline {
+    display: inline-block;
+    margin-left: 6px;
+}
